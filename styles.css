@@ -53,3 +53,18 @@ body {
     padding: 10px;
 }
 
+.code {
+    margin-left: 30px;
+    background-color: #F7F7F7 ;
+    display: block;
+    border-radius: 4px;
+    padding: 15px;
+    margin-right: 32px;
+}
+
+.points {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
