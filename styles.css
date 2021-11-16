@@ -28,16 +28,16 @@ body {
     overflow: auto;
 }
 
-.link {
+.nav-link {
     text-decoration: none;
-    color: black;
-    border-top: 1px solid black;
-    padding: 10px;
-    display: block;
+    color: #4d4e53;
+    margin-left: 8px;
 }
 
 .nav-items {
     list-style: none;
+    border-top: 1px solid #4d4e53;
+    padding: 10px;
 }
 
 header {
@@ -46,24 +46,49 @@ header {
 }
 
 #main-doc {
-    padding: 30px;
+    padding: 10px 30px;
     height: 89vh;
     overflow: auto;
+    margin-left: 10px;
 }
 
-.code {
-    margin-left: 30px;
-    background-color: #F7F7F7 ;
-    display: block;
-    border-radius: 4px;
-    padding: 15px;
-    margin-right: 32px;
+.description {
+    padding: 20px 10px;
+}
+
+.main-section p {
+    margin: 10px;
+
+}
+
+.main-section li {
+    margin-bottom: 10px;
 }
 
 .points {
+    list-style-type: disc;
+    margin: 10px;
+}
+
+.code {
+    background-color: #F7F7F7 ;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-family: monospace;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.points {
+    list-style-type: disc;
+    padding-inline-start: 40px;
+}
+
+.sub-points {
     list-style-type: circle;
-    margin-left: 20px;
-    margin-top: 10px;
+    padding-inline-start: 80px;
 }
 
 @media screen and (max-width: 680px){
@@ -73,7 +98,12 @@ header {
     }
 
     .nav-links {
-        height: 25vh;
+        height: 30vh;
+        border: 2px solid #4d4e53;
+    }
+
+    #main-doc {
+        margin-top: 40px;
     }
 }
     
