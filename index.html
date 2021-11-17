@@ -166,8 +166,10 @@
                         JavaScript code:
                     </p>
                     <code class="code">
-                        function greetMe(yourName) { alert("Hello " + yourName); }
-                        greetMe("World");
+                    <pre>
+function greetMe(yourName) { alert("Hello " + yourName); }
+greetMe("World");
+                    </pre>
                     </code>
                     <p>
                         Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
@@ -264,8 +266,10 @@
                         This behavior changes, when using the let declaration introduced in ECMAScript 2015.
                     </p>
                     <code class="code">
-                        if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-                        defined
+                        <pre>
+if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+defined
+                        </pre>
                     </code>
                 </div>
             </section>
@@ -317,9 +321,11 @@
                         example:
                     </p>
                     <code class="code">
-                        // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
-                        CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
-                        }
+                        <pre>
+// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+}
+                        </pre>
                     </code>
                     <p>
                         However, object attributes are not protected, so the following statement is executed without
@@ -405,8 +411,10 @@
                         follows:
                     </p>
                     <code class="code">
-                        if (condition_1) { statement_1; } else if (condition_2) { statement_2;
-                        } else if (condition_n) { statement_n; } else { statement_last; }
+                        <pre>
+if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+} else if (condition_n) { statement_n; } else { statement_last; }
+                        </pre>
                     </code>
                     <p>
                         In the case of multiple conditions only the first logical condition which evaluates to true will
@@ -416,10 +424,12 @@
                         it's good practice to always use block statements, especially when nesting if statements:
                     </p>
                     <code class="code">
-                        if (condition) { statement_1_runs_if_condition_is_true;
-                        statement_2_runs_if_condition_is_true; } else { 
-                        statement_3_runs_if_condition_is_false;
-                        statement_4_runs_if_condition_is_false; }
+                        <pre>
+if (condition) { statement_1_runs_if_condition_is_true;
+statement_2_runs_if_condition_is_true; } else { 
+statement_3_runs_if_condition_is_false;
+statement_4_runs_if_condition_is_false; }
+                        </pre>
                     </code>
                     <p>
                         It is advisable to not use simple assignments in a conditional expression, because the
@@ -564,7 +574,6 @@
             </section>
         </main>
     </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
