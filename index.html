@@ -49,7 +49,7 @@
                     <a class="nav-link" href="#Data_types">Data types</a>
                 </li>
                 <li class="nav-items">
-                    <a class="nav-link" href="#if_else_statement">if else statement</a>
+                    <a class="nav-link" href="#if...else_statement">if...else statement</a>
                 </li>
                 <li class="nav-items">
                     <a class="nav-link" href="#while_statement">while statement</a>
@@ -166,8 +166,10 @@
                         JavaScript code:
                     </p>
                     <code class="code">
-                    <pre>
-function greetMe(yourName) { alert("Hello " + yourName); }
+                        <pre>
+function greetMe(yourName) {
+alert("Hello " + yourName); 
+}
 greetMe("World");
                     </pre>
                     </code>
@@ -260,35 +262,42 @@ greetMe("World");
                         declared, not the block, which in this case is an if statement.
                     </p>
                     <code class="code">
-                        if (true) { var x = 5; } console.log(x); // 5
+                        <pre>
+(true) { 
+var x = 5; 
+} 
+console.log(x); // 5
+                        </pre>
                     </code>
                     <p>
                         This behavior changes, when using the let declaration introduced in ECMAScript 2015.
                     </p>
                     <code class="code">
                         <pre>
-if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-defined
+(true) { 
+let y = 5; 
+} 
+console.log(y); // ReferenceError: y is not defined
                         </pre>
                     </code>
                 </div>
             </section>
             <section class="main-section" id="Global_variables">
                 <header>Global variables</header>
-                    <div class="description">
-                        <p>
+                <div class="description">
+                    <p>
                         Global variables are in fact properties of the global object. In web pages the global object is
                         window,
                         so you can set and access global variables using the window.variable syntax.
-                        </p>
-                        <p>
+                    </p>
+                    <p>
                         Consequently, you can access global variables declared in one window or frame from another
                         window or
                         frame by specifying the window or frame name. For example, if a variable called phoneNumber is
                         declared
                         in a document, you can refer to this variable from an iframe as parent.phoneNumber.
-                        </p>
-                    </div>
+                    </p>
+                </div>
             </section>
             <section class="main-section" id="Constants">
                 <header>Constants</header>
@@ -322,8 +331,14 @@ defined
                     </p>
                     <code class="code">
                         <pre>
-// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
-CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+// THIS WILL CAUSE AN ERROR
+function f() {}; 
+const f = 5; 
+                            
+// THIS WILL CAUSE AN ERROR ALSO
+function f() { 
+const g = 5; var g; 
+//statements
 }
                         </pre>
                     </code>
@@ -332,7 +347,10 @@ CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
                         problems.
                     </p>
                     <code class="code">
-                        const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
+                        <pre>
+const MY_OBJECT = {"key": "value"}; 
+MY_OBJECT.key = "otherValue";
+                        </pre>
                     </code>
                 </div>
             </section>
@@ -382,8 +400,8 @@ CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
                     </p>
                 </div>
             </section>
-            <section class="main-section" id="if_else_statement">
-                <header>if else statement</header>
+            <section class="main-section" id="if...else_statement">
+                <header>if...else statement</header>
                 <div class="description">
                     <p>
                         Use the if statement to execute a statement if a logical condition is true. Use the optional
@@ -392,7 +410,13 @@ CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
                         to execute a statement if the condition is false. An if statement looks as follows:
                     </p>
                     <code class="code">
-                        if (condition) { statement_1; } else { statement_2; }
+                        <pre>
+if (condition) {
+statement_1; 
+} else { 
+statement_2; 
+}
+                        </pre>
                     </code>
                     <p>
                         condition can be any expression that evaluates to true or false. See Boolean for an explanation
@@ -412,8 +436,15 @@ CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
                     </p>
                     <code class="code">
                         <pre>
-if (condition_1) { statement_1; } else if (condition_2) { statement_2;
-} else if (condition_n) { statement_n; } else { statement_last; }
+if (condition_1) { 
+statement_1; 
+} else if (condition_2) { 
+statement_2; 
+} else if (condition_n) { 
+statement_n; 
+} else { 
+statement_last; 
+}
                         </pre>
                     </code>
                     <p>
@@ -425,10 +456,13 @@ if (condition_1) { statement_1; } else if (condition_2) { statement_2;
                     </p>
                     <code class="code">
                         <pre>
-if (condition) { statement_1_runs_if_condition_is_true;
-statement_2_runs_if_condition_is_true; } else { 
-statement_3_runs_if_condition_is_false;
-statement_4_runs_if_condition_is_false; }
+if (condition) { 
+statement_1_runs_if_condition_is_true; 
+statement_2_runs_if_condition_is_true; 
+} else { 
+statement_3_runs_if_condition_is_false; 
+statement_4_runs_if_condition_is_false; 
+}
                         </pre>
                     </code>
                     <p>
@@ -484,80 +518,90 @@ statement_4_runs_if_condition_is_false; }
                         The following while loop iterates as long as n is less than three:
                     </p>
                     <code class="code">
-                        var n = 0; var x = 0; while (n < 3) { n++; x +=n; } </code> <p class="description">
-                            With each iteration, the loop increments n
-                            and adds that value to x. Therefore, x and n take on the following values:
-                            </p>
-                            <p>
-                                <ul>
+                        <pre>
+var n = 0; 
+var x = 0; 
+while (n &lt; 3) { 
+n++; x += n; 
+} 
+                        </pre>
+                    </code>
+                    <p>
+                        With each iteration, the loop increments n
+                        and adds that value to x. Therefore, x and n take on the following values:
+                    </p>
+                    <ul class="points">
+                        <li>
+                            After the first pass: n=1 and x=1
+                        </li>
+                        <li>
+                            After the second pass: n=2 and x=3
+                        </li>
+                        <li>
+                            After the third pass: n=3 and x=6
+                        </li>
+                    </ul>
+                    <p>
+                        After completing the third
+                        pass, the condition n &lt; 3 is no longer true, so the loop terminates. </p> </div> </section>
+                            <section class="main-section" id="Function_declarations">
+                            <header>Function declarations</header>
+                            <div class="description">
+                                <p>
+                                    A function definition (also called a function declaration, or function
+                                    statement)
+                                    consists
+                                    of the function keyword, followed by:
+                                </p>
+                                <ul class="points">
                                     <li>
-                                        After the first pass: n=1 and x=1
+                                        The name of the function.
                                     </li>
                                     <li>
-                                        After the second pass: n=2 and x=3
+                                        A list of arguments to the function, enclosed in parentheses and
+                                        separated
+                                        by
+                                        commas.
                                     </li>
                                     <li>
-                                        After the third pass: n=3 and x=6
+                                        The JavaScript statements that define the function, enclosed in curly
+                                        brackets,
+                                        { }.
                                     </li>
                                 </ul>
-                            </p>
-                            <p>
-                                After completing the third
-                                pass, the condition n < 3 is no longer true, so the loop terminates. </p> </div>
-                                    </section> <section class="main-section" id="Function_declarations">
-                                    <header>Function declarations</header>
-                                    <div class="description">
-                                        <p>
-                                            A function definition (also called a function declaration, or function
-                                            statement)
-                                            consists
-                                            of the function keyword, followed by:
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                The name of the function.
-                                            </li>
-                                            <li>
-                                                A list of arguments to the function, enclosed in parentheses and
-                                                separated
-                                                by
-                                                commas.
-                                            </li>
-                                            <li>
-                                                The JavaScript statements that define the function, enclosed in curly
-                                                brackets,
-                                                { }.
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            For example, the following code defines a simple function named square:
-                                        </p>
-                                        <code class="code">
-                                            function square(number) { return number * number; }
-                                        </code>
-                                        <p>
-                                            The function square takes one argument, called number. The function consists
-                                            of
-                                            one
-                                            statement that says to return the argument of the function (that is, number)
-                                            multiplied by itself. The return statement specifies the value returned by
-                                            the
-                                            function.
-                                        </p>
-                                        <code class="code">
-                                            return number * number;
-                                        </code>
-                                        <p>
-                                            Primitive parameters (such as a number) are passed to functions by value;
-                                            the
-                                            value
-                                            is
-                                            passed to the function, but if the function changes the value of the
-                                            parameter,
-                                            this
-                                            change is not reflected globally or in the calling function.
-                                        </p>
-                                    </div>
+                                <p>
+                                    For example, the following code defines a simple function named square:
+                                </p>
+                                <code class="code">
+                                    <pre>
+function square(number) { 
+return number * number; 
+}
+                                    </pre>
+                                </code>
+                                <p>
+                                    The function square takes one argument, called number. The function consists
+                                    of
+                                    one
+                                    statement that says to return the argument of the function (that is, number)
+                                    multiplied by itself. The return statement specifies the value returned by
+                                    the
+                                    function.
+                                </p>
+                                <code class="code">
+                                    return number * number;
+                                </code>
+                                <p>
+                                    Primitive parameters (such as a number) are passed to functions by value;
+                                    the
+                                    value
+                                    is
+                                    passed to the function, but if the function changes the value of the
+                                    parameter,
+                                    this
+                                    change is not reflected globally or in the calling function.
+                                </p>
+                            </div>
             </section>
             <section class="main-section" id="Reference">
                 <header>Reference</header>
@@ -575,5 +619,4 @@ statement_4_runs_if_condition_is_false; }
         </main>
     </div>
 </body>
-
 </html>
